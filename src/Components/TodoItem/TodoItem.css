@@ -1,0 +1,11 @@
+.divTasks{
+    width:49%;
+    margin: auto;
+}
+.taskLi{
+    margin-left:5%;
+    color:white;
+}
+.inCheckbox{
+    margin-right:5px;
+}

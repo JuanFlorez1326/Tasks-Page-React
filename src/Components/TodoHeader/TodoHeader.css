@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+header {
+    background-color:brown;
+    color:white;
+    text-align:center;
+    padding:40px;
+    margin-bottom:7%;
+    font-size:20px;
+}
+.divTasks{
+    background-color:#00406c;
+    color:white;
+    padding-top:15px;
+    padding-left:15px;
+}
+.divTasks h2{
+    font-size:30px;
+}

@@ -1,6 +1,9 @@
+import './App.css'
 import React, {useState,Fragment, useRef,useEffect} from "react";
-import { TodoList } from "./Components/TodoList";
+import { TodoList } from "./Components/TodoList/TodoList";
 import {v4 as uuidv4} from 'uuid';
+import { TodoHeader } from "./Components/TodoHeader/TodoHeader";
+import { TodoFooter } from "./Components/TodoFooter/TodoFooter";
 
 const KEY = "todoApp.todos"
 
@@ -43,12 +46,18 @@ export function App() {
 
 
     return(
-    <Fragment>
-        <TodoList todos = {todos} togleTodo={togleTodo}/>,
-        <input  ref={todoTaskRef} type="text" placeholder = "Nueva Tarea"/>
-        <button onClick={handleTodoAdd}>Agregar</button>
-        <button onClick={hadleClearAll}>Eliminar</button>
-        <div>Te quedan {todos.filter((todo) => !todo.completed).length} tareas por terminar</div>
-    </Fragment>
+        <Fragment>
+            <TodoHeader/>
+            <TodoList todos = {todos} togleTodo={togleTodo}/>
+                <div className="classTodoList" >
+                    <input className="taskInput"  ref={todoTaskRef} type="text" placeholder = "Nueva Tarea"/>
+                    <button className="btnAdd" onClick={handleTodoAdd}>Agregar</button>
+                    <button className="btnDelete" onClick={hadleClearAll}>Eliminar</button>
+                    <div className="divMessage">
+                        Te quedan {todos.filter((todo) => !todo.completed).length} tareas por terminar.
+                    </div>
+                </div>
+            <TodoFooter/>
+        </Fragment>
     )
 }
