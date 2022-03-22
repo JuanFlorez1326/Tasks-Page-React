@@ -50,11 +50,11 @@ export function App() {
             <TodoHeader/>
             <TodoList todos = {todos} togleTodo={togleTodo}/>
                 <div className="classTodoList" >
-                    <input className="taskInput"  ref={todoTaskRef} type="text" placeholder = "Nueva Tarea"/>
-                    <button className="btnAdd" onClick={handleTodoAdd}>Agregar</button>
-                    <button className="btnDelete" onClick={hadleClearAll}>Eliminar</button>
+                    <input className="taskInput"  ref={todoTaskRef} type="text" placeholder = "New Homework"/>
+                    <button className="btnAdd" onClick={handleTodoAdd}>Add</button>
+                    <button className="btnDelete" onClick={hadleClearAll}>Delete</button>
                     <div className="divMessage">
-                        Te quedan {todos.filter((todo) => !todo.completed).length} tareas por terminar.
+                        You have {todos.filter((todo) => !todo.completed).length} tasks left per terminal.
                     </div>
                 </div>
             <TodoFooter/>

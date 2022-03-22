@@ -38,8 +38,23 @@
     padding-top:20px;
 }
 .taskInput{
-    margin-top:7%;
+    margin-top:35px;
     padding:5px 0px 5px 0px;
     width:50%;
     border:1px solid #001a2c;
+    margin-bottom:20px;
+}
+@media screen and (max-width: 767px){
+    .taskInput{
+        width:90%;
+    }
+    .btnAdd{
+        width:40%;
+    }
+    .btnDelete{
+        width:40%;
+    }
+    .classTodoList{
+        width:70%;
+    }
 }

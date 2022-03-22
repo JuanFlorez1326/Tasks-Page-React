@@ -20,3 +20,14 @@ header {
 .divTasks h2{
     font-size:30px;
 }
+@media screen and (max-width: 767px) {
+    header {
+        font-size:15px;
+    }
+    .divTasks {
+        width:67%;
+    }
+    .divTasks h2 {
+        padding-bottom:10px;
+    }
+}
